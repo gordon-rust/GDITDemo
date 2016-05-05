@@ -76,7 +76,7 @@
             $http({
                 method: "POST",
                 url: url + "/add",
-                data: data.np
+                data: data
             }).then(function success(response) {
                 loadProducts();
             }, function error(response) {
@@ -85,11 +85,12 @@
         }
 
         function updatePerson(data) {
+            console.log(data);
             $http({
                 method: "PUT",
                 url: url + "/update",
-                data: data.np,
-                params: {id:data.np._id}
+                data: data,
+                params: {id:data._id}
             }).then(function success(response) {
                 loadProducts();
             }, function error(response) {
