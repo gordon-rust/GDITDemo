@@ -1,0 +1,185 @@
+
+<!-- Modal Header -->
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+    </button>
+    <h4 class="modal-title" id="myModalLabel">
+        Person Detail
+    </h4>
+</div>
+
+<!-- Modal Body -->
+<div class="modal-body">
+    <form class="form-horizontal" role="form" name="inputForm" novalidate>
+        <div class="form-group required">
+            <label  class="col-sm-4 control-label" for="inputFN">First Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="inputFN" id="inputFN" ng-model="modalOptions.np.firstName" required/>
+                <span style="color:red" ng-show="inputForm.inputFN.$dirty && inputForm.inputFN.$invalid">
+                    <span ng-show="inputForm.inputFN.$error.required">First Name is required.</span>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-4 control-label" for="inputFN">Middle Initial</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputMI" ng-model="modalOptions.np.middleInitial" maxlength="1"/>
+            </div>
+        </div>
+        <div class="form-group required">
+            <label  class="col-sm-4 control-label" for="inputLN">Last Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="inputLN" id="inputLN" ng-model="modalOptions.np.lastName" required/>
+                <span style="color:red" ng-show="inputForm.inputLN.$dirty && inputForm.inputLN.$invalid">
+                    <span ng-show="inputForm.inputLN.$error.required">Last Name is required.</span>
+                </span>
+            </div>
+        </div>
+        <div class="form-group required">
+            <label  class="col-sm-4 control-label" for="inputEmail">Email</label>
+            <div class="col-sm-4">
+                <input type="email" class="form-control" name="inputEmail" id="inputEmail" ng-model="modalOptions.np.emailAddress" required/>
+                <span style="color:red" ng-show="inputForm.inputEmail.$dirty && inputForm.inputEmail.$invalid">
+                    <span ng-show="inputForm.inputEmail.$error.required">Email is required.</span>
+                    <span ng-show="inputForm.inputEmail.$error.email">Invalid email address.</span>
+                </span>
+            </div>
+        </div>
+        <div class="form-group required">
+            <label  class="col-sm-4 control-label">Date Hired</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="inputHired" ng-model="modalOptions.np.dateHired"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-4 control-label" for="inputPosition">Position Category</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="inputPosition" ng-model="modalOptions.np.position">
+                    <option value="">Select Category</option>
+                    <option value="Indirect">Indirect</option>
+                    <option value="Direct">Direct</option>
+                    <option value="Program Manager">Program Manager</option>
+                    <option value="Director">Director</option>
+                    <option value="Executive">Executive</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label" for="inputPhone" >Phone Number</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputPhone" ng-model="modalOptions.np.phoneNumber"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label" for="inputAddrOne" >Apt #, Suite</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputAddrOne" ng-model="modalOptions.np.addressLineOne"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label" for="inputAddrTwo" >Street Address</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputAddrTwo" ng-model="modalOptions.np.addressLineTwo"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label" for="inputCity" >City</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputCity" ng-model="modalOptions.np.city"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label" for="inputState" >State</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="inputState" ng-model="np.state">
+                    <option value="">Select State</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AS">American Samoa</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District of Columbia</option>
+                    <option value="FM">Federated States of Micronesia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="GU">Guam</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MH">Marshall Islands</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="MP">Northern Mariana Islands</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PW">Palau</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="PR">Puerto Rico</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VI">Virgin Islands</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label" for="inputZip" >Zip</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputZip" ng-model="modalOptions.np.zip"/>
+            </div>
+        </div>
+        <div class="form-group required">
+            <label class="col-sm-4 control-label" for="inputActive" >Active Employee</label>
+            <div class="col-sm-1">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="inputActive" ng-model="modalOptions.np.active"/> Active
+                    </label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Modal Footer -->
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" data-ng-click="modalOptions.close()">{{modalOptions.closeButtonText}}</button>
+    <button type="button" class="btn btn-primary" data-dismiss="modal"
+            ng-disabled="inputForm.inputFN.$pristine && inputForm.inputFN.$invalid || inputForm.inputLN.$pristine && inputForm.inputLN.$invalid || inputForm.inputEmail.$pristine && inputForm.inputEmail.$invalid"
+            data-ng-click="modalOptions.ok();">{{modalOptions.actionButtonText}}</button>
+</div>
