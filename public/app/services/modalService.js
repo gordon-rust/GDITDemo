@@ -27,6 +27,34 @@
                     $scope.modalOptions.close = function (result) {
                         $uibModalInstance.dismiss('cancel');
                     };
+
+                    $scope.dateOptions = {
+                        dateDisabled: disabled,
+                        formatYear: 'yy',
+                        maxDate: new Date(),
+                        minDate: new Date(1980, 1, 1),
+                        startingDay: 1
+                    };
+
+                    // Disable weekend selection
+                    function disabled(data) {
+                        var date = data.date,
+                            mode = data.mode;
+                        return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+                    }
+
+                    $scope.open1 = function() {
+                        $scope.popup1.opened = true;
+                    };
+
+                    $scope.setDate = function(month, day, year) {
+                        $scope.modalOptions.np.dateHired = new Date(month, day, year);
+                    };
+
+
+                    $scope.popup1 = {
+                        opened: false
+                    };
                 };
                 tempModalDefaults.controller.$inject = ['$scope', '$uibModalInstance'];
             }

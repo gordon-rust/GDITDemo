@@ -50,7 +50,12 @@
         <div class="form-group required">
             <label  class="col-sm-4 control-label">Date Hired</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" id="inputHired" ng-model="modalOptions.np.dateHired"/>
+                <p class="input-group">
+                    <input type="text" class="form-control" uib-datepicker-popup="MM/dd/yyyy" ng-model="modalOptions.np.dateHired" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
             </div>
         </div>
         <div class="form-group">
